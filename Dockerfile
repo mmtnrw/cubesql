@@ -10,7 +10,7 @@ RUN gzip -dc cubesql_linux64bit.tgz | tar xvf -
 RUN mv cubesql/data/core/Linux/cubesql /opt/cubesql/cubesql
 RUN rm cubesql_linux64bit.tgz && rm -R cubesql
 
-RUN mkdir /var/opt
+#RUN mkdir /var/opt
 RUN mkdir /var/opt/cubesql
 
 #RUN mkdir /opt/databases

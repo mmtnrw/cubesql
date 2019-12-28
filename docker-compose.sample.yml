@@ -1,16 +1,11 @@
-version: '3'
+version: '2.2'
 
 services:
   cubesql-server:
-    image: mmtnrw/cubesql-55:latest
-    # build:
-    #   context: .
-    #   dockerfile: Dockerfile
-    ports:
-      - "4430:4430"
-    networks:
-       - cubesql-net
-
-networks:
-  cubesql-net:
-    driver: bridge
+     image: "mmtnrw/cubesql-55:latest"
+     network_mode: host
+     restart: always
+     volumes:
+       - "/share/CubeSQL/databases:/opt/databases"
+       - "/share/CubeSQL/backups:/opt/backups"
+       - "/share/CubeSQL/settings:/settings"

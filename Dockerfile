@@ -16,6 +16,7 @@ RUN mkdir /var/opt/cubesql
 #RUN mkdir /opt/databases
 #RUN mkdir /opt/backups
 
+RUN rm -R /etc/opt
 RUN ln -s /opt/databases /var/opt/cubesql/databases
 RUN ln -s /opt/databases /var/opt/cubesql/backups
 RUN ln -s /settings /etc/opt

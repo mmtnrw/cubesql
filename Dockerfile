@@ -1,4 +1,4 @@
-FROM debian:7-slim
+FROM debian:stable-slim
 
 ENV CUBESQL_VERSION 550
 
